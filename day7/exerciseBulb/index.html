@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      
+      
+        #container {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            background-color: white;
+            justify-content: center;
+            text-align: center;
+        }
+        /* #bulb {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        } */
+    </style>
+</head>
+<body>
+    
+    <div id="bulb">
+        <div id="container"></div>
+        <input type="button" value="RED" />
+        <input type="button" value="YELLOW" />
+
+        <input type="button" value="GREEN" />
+        <input type="button" value="BLUE" />
+
+    </div>
+    <script>
+        const container = document.getElementById("container");
+        const buttons = document.querySelectorAll("input[type='button']");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const color = button.value.toLowerCase();
+                container.style.backgroundColor = color;
+                innerText = color;
+            });
+        });
+    </script>
+</body>
+</html>
